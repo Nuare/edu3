@@ -39,7 +39,7 @@ public class Main {
                     side = "\n\nYou can still choose right direction\n";
 
                     if(mv>3){
-                        System.out.println("lol");
+                        break;
                     }
 
             }
