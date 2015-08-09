@@ -1,10 +1,10 @@
+import javax.swing.*;
 import java.util.Scanner;
 
-public class Main {
+public class Main  {
 
 
     public static void main(String[] args) {
-
 
         Scanner in = new Scanner(System.in);
 
@@ -16,38 +16,23 @@ public class Main {
         String name = in.nextLine();
         System.out.println("____________________________________________________________________________________________________________");
 
-        while (true) {
-            System.out.println("Enter movement direction:\n" + "0) Left\n" + "1) Right\n" + "2) Forward\n" + "3) Backward");
+        System.out.println("Enter movement direction:\n" + "0) Left\n" + "1) Right\n" + "2) Forward\n" + "3) Backward");
 
-            int mv = in.nextInt();
+        int side = in.nextInt();
 
-            String side;
-            switch (mv) {
-                case 0:
-                    side = "Left";
-                    break;
-                case 1:
-                    side = "Right";
-                    break;
-                case 2:
-                    side = "Forward";
-                    break;
-                case 3:
-                    side = "Backward";
-                    break;
-                default:
-                    side = "\n\nYou can still choose right direction\n";
+        System.out.println("____________________________________________________________________________________________________________");
 
-                    if(mv>3){
-                        break;
-                    }
+        Human u1 = new Human();
 
-            }
-
-            System.out.println("____________________________________________________________________________________________________________");
-        Human u1 = new Human(age, name, side);
-        }
+        u1.getName();
+        System.out.println(age);
+        u1.getAge();
+        System.out.println(name);
+        u1.move(side);
+        System.out.println();
 
     }
+
+
 
 }
